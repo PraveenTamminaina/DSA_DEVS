@@ -14,9 +14,10 @@ void compress()
     {
       j++;
     }
-    cout << str[i] << j - i << endl;
+    cout << str[i] << j - i;
     i = j;
   }
+  cout << endl;
 }
 
 int main()
