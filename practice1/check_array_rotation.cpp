@@ -1,5 +1,4 @@
 #include <iostream>
-#include <climits>
 using namespace std;
 
 void checkrotation()
@@ -14,34 +13,25 @@ void checkrotation()
   }
 
   int count = 0;
-  bool flag = false;
-  for (int i = 0; i < n; i++)
+
+  for (int i = 0; i < n - 1; i++)
   {
     if (arr[i] > arr[i + 1])
     {
-      flag = true;
-      break;
+      cout << i + 1 << endl;
+      return;
     }
-
-    count++;
   }
 
-  if (flag)
-  {
-    cout << count + 1 << endl;
-  }
-  else
-  {
-    cout << 0 << endl;
-  }
+  cout << 0 << endl;
 }
 
 int main()
 {
-  int n;
-  cin >> n;
+  int t;
+  cin >> t;
 
-  for (int i = 0; i < n; i++)
+  for (int i = 0; i < t; i++)
   {
     checkrotation();
   }
