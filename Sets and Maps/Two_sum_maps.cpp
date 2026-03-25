@@ -14,16 +14,17 @@ int main()
     cin >> arr[i];
   }
 
-  map<int, int> mp;
+  long long count = 0;
+
+  map<long long, long long> mp;
   for (int i = 0; i < n; i++)
   {
     if (mp.find(target - arr[i]) != mp.end())
     {
-      cout << mp[target - arr[i]] << " " << i + 1;
-      return 0;
+      count += mp[target - arr[i]];
     }
-    mp[arr[i]] = i + 1;
+    mp[arr[i]]++;
   }
 
-  cout << -1;
+  cout << count;
 }
