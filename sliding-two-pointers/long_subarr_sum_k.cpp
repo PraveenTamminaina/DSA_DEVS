@@ -15,7 +15,7 @@ int main()
   }
 
   int l = 0;
-  int sum = 0;
+  long long sum = 0;
   int maxlen = INT_MIN;
   for (int r = 0; r < n; r++)
   {
@@ -31,3 +31,4 @@ int main()
 
   cout << maxlen;
 }
+
